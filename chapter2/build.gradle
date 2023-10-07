@@ -1,0 +1,32 @@
+
+plugins {
+    id "java"
+}
+
+group "com.rdrxproject"
+version "0.1"
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(19))
+    }
+}
+
+dependencies {
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.8.2"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-enigne:5.8.2"
+}
+
+test {
+    useJUnitPlatform()
+
+    maxHeapSize = "1G"
+
+    testLogging {
+        events "passed"
+    }
+}
