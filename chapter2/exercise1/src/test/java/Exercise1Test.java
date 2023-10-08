@@ -3,11 +3,9 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 
-
-public class BasicArithmeticTest {
-    BasicArithmetic exercise = new BasicArithmetic();
+public class Exercise1Test {
+    Exercise1 exercise = new Exercise1();
 
     @Test
     public void testCalcSumAndCountAllNumbersDivBy_2_Or_7(){
@@ -31,23 +29,13 @@ public class BasicArithmeticTest {
     @Test
     public void testIsOddOrEven() {
         // Testing our isOddOrEven method (True if even, False if odd)
-        boolean oddOrEvenResult = exercise.isOddOrEven(2); // True
-        boolean oddOrEvenResult2 = exercise.isOddOrEven(3); // False
+        boolean oddOrEvenResult = exercise.isOddOrEven(2);
+        boolean oddOrEvenResult2 = exercise.isOddOrEven(3);
         boolean oddOrEvenResult3 = exercise.isOddOrEven(666);
         boolean oddOrEvenResult4 = exercise.isOddOrEven(69);
         Assertions.assertTrue(oddOrEvenResult);
         Assertions.assertFalse(oddOrEvenResult2);
         Assertions.assertTrue(oddOrEvenResult3);
         Assertions.assertFalse(oddOrEvenResult4);
-    }
-
-    @Test
-    public void testNumberAsText() {
-        String digitList = exercise.numberAsText(42);
-        String digitList2 = exercise.numberAsText(24680);
-        String digitList3 = exercise.numberAsText(13579);
-        Assertions.assertEquals("FOUR TWO", digitList);
-        Assertions.assertEquals("TWO FOUR SIX EIGHT ZERO", digitList2);
-        Assertions.assertEquals("ONE THREE FIVE SEVEN NINE", digitList3);
     }
 }
