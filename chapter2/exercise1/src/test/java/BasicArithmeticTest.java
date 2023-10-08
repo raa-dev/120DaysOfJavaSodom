@@ -3,6 +3,8 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 
 public class BasicArithmeticTest {
     BasicArithmetic exercise = new BasicArithmetic();
@@ -37,5 +39,15 @@ public class BasicArithmeticTest {
         Assertions.assertFalse(oddOrEvenResult2);
         Assertions.assertTrue(oddOrEvenResult3);
         Assertions.assertFalse(oddOrEvenResult4);
+    }
+
+    @Test
+    public void testNumberAsText() {
+        String digitList = exercise.numberAsText(42);
+        String digitList2 = exercise.numberAsText(24680);
+        String digitList3 = exercise.numberAsText(13579);
+        Assertions.assertEquals("FOUR TWO", digitList);
+        Assertions.assertEquals("TWO FOUR SIX EIGHT ZERO", digitList2);
+        Assertions.assertEquals("ONE THREE FIVE SEVEN NINE", digitList3);
     }
 }
