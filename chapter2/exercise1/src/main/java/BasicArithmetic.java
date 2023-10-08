@@ -37,9 +37,13 @@ public class BasicArithmetic {
     then divides the product by two, and outputs the remainder with respect to division by 7.*/
 
     public int calc(int m, int n) {
-
         return ((m * n)/2) % 7;
     }
 
+    /*Create a method boolean isOddorEven(n) that will check if the
+    passed integer is even or odd, (True if even; False if odd).*/
+    public boolean isOddOrEven(int n){
+        return n % 2 == 0;
+    }
 
 }
