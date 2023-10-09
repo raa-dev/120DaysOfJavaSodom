@@ -22,15 +22,12 @@ public class Exercise3 {
                     divisors.add(j);
                 }
             }
-            // Iteramos sobre cada valor en la lista de divisores y los sumamos
             for (int number_ : divisors){
                 sum += number_;
             }
-            // Si la suma es igual al valor que estamos evaluando (i), entonces i es un número perfecto
             if (sum == i){
                 perfectNumbers.add(i);
             }
-
         }
         return perfectNumbers;
     }
