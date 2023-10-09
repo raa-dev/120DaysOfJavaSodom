@@ -1,4 +1,4 @@
 
 rootProject.name = "120DaysOfJavaSodom"
 
-include "chapter2:exercise1"
+include "Challenges:chapter2"
